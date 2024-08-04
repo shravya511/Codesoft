@@ -1,0 +1,373 @@
+/* Existing styles... */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background color */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.nav__logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.nav__menu__btn {
+  display: none;
+  cursor: pointer;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav__btns .btn {
+  background-color: #12cefd;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.0rem; /* Increase font size here */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(18, 206, 253, 0.5); /* Light glow effect */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+}
+
+.nav__btns .btn:hover {
+  box-shadow: 0 0 15px rgba(18, 206, 253, 0.8); /* Enhanced glow on hover */
+}
+
+.nav__btns .btn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header Container */
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  position: relative; /* Ensures absolute positioning of the image and cards */
+  background-image: url('assets/footer2.jpeg'); /* Add your background image */
+  background-size: 160% auto; /* Set the background size */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+}
+
+.header__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%; /* Set the width to 40% */
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.header__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Center the image */
+}
+
+.header__image__cards {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with surrounding elements */
+}
+
+.header__image__card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 70px;
+  height: 70px;
+  border: 2px solid #280606;
+  animation: glow 5s infinite alternate;
+  pointer-events: auto; /* Allow interaction if needed */
+}
+
+.header__image__card span {
+  font-size: 1.1rem;
+}
+
+.header__image__card:nth-child(1) {
+  top: 20%;
+  left: 80%;
+  transform: translate(-10%, -95%);
+}
+
+.header__image__card:nth-child(2) {
+  top: 30%;
+  left: 10%;
+  transform: translate(-40%, -40%);
+}
+
+.header__image__card:nth-child(3) {
+  top: 60%;
+  left: 83%;
+  transform: translate(-10%, -10%);
+}
+
+.header__image__card:nth-child(4) {
+  top: 85%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.header__content {
+  text-align:center;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.header__content h1 {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+
+.header__content p {
+  font-size: 1rem;
+  margin-bottom: 0rem;
+}
+
+.input__row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input__group {
+  flex: 1;
+}
+
+.input__group h5 {
+  margin: 0;
+}
+
+.input__group div {
+  display: flex;
+  align-items: center;
+}
+
+.input__group input {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.bar {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+}
+
+/* Content Styles */
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  .nav__links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav__menu__btn {
+    display: block;
+  }
+
+  .nav__btns {
+    display: none;
+  }
+
+  .header__container {
+    flex-direction: column;
+  }
+
+  .header__image, .header__content {
+    flex: 1 1 100%;
+  }
+
+  .input__row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__content h1 {
+    font-size: 1.5rem;
+  }
+
+  .header__content p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Photo Gallery Styles */
+.photo-gallery {
+  display: flex;
+  justify-content: space-around; /* Distribute photos evenly */
+  margin-top: 20px;
+}
+
+.photo {
+  width: 30%; /* Adjust width as needed */
+  padding: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.3); /* Blue glow effect for images */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.photo img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+/* General styles for the page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles specifically for the destination page */
+.destination-page {
+  background-color: #add8e6; /* Light blue background */
+  padding: 20px;
+  text-align: center;
+}
+
+.destination__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto; /* Center the list container */
+  max-width: 1200px; /* Max width for the list container */
+}
+
+.destination__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* White background for the items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination__item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.destination__item h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.destination__item p {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+/* Animation class */
+.pulse {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Define the pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Ensure items have smooth transitions */
+.destination__item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Class to trigger the pulse animation */
+.pulse {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Ensure items have smooth transitions */
+.destination__item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination__item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
