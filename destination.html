@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Destination | SoulTravel</title>
+</head>
+<body class="destination-page">
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">Soul<span>Travel</span>.</a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="destination.html" class="nav-link">Destination</a></li>
+      <li><a href="package.html" class="nav-link">Package</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav__btns">
+      <button class="btn sign__up" id="sign-up-btn" onclick="location.href='signup.html'">Sign Up</button>
+      <button class="btn sign__in" id="sign-in-btn" onclick="location.href='signin.html'">Sign In</button>
+    </div>
+  </nav>
+  <main id="main-content">
+    <header class="header__container">
+      <div class="header__image">
+        <img src="assets/destination.jpeg" alt="Destination" class="centered-image"/>
+      </div>
+      <div class="header__content">
+        <h1>Explore the Best Destinations</h1>
+        <p>Discover the most exciting travel destinations around the world. Whether you are looking for relaxing beaches, thrilling adventures, or cultural experiences, we have something for everyone.</p>
+        <form id="search-form">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Destination</h5>
+              <div>
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="Paris, France" />
+              </div>
+            </div>
+            <div class="input__group">
+              <h5>Date</h5>
+              <div>
+                <span><i class="ri-calendar-2-line"></i></span>
+                <input type="text" placeholder="17 July 2024" />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Search</button>
+        </form>
+        <div class="bar">
+          Copyright © 2024 Web Design Mastery. All rights reserved.
+        </div>
+      </div>
+    </header>
+    <!-- Destination photo gallery -->
+    <section class="destination-gallery">
+      <h2>Explore Our Top Destinations</h2>
+      <img src="assets/paris.jpeg" alt="Paris" />
+      <img src="assets/newyork.jpeg" alt="New York" />
+      <img src="assets/tokyo.jpeg" alt="Tokyo" />
+      <img src="assets/sydney.jpg" alt="Sydney" />
+      <img src="assets/barcelona.jpg" alt="Barcelona" />
+    </section>
+  </main>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+</html>
